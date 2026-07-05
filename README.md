@@ -1,124 +1,267 @@
 # TaxLens
-**AI-powered Financial Document Intelligence**
 
-TaxLens is an AI-powered web application designed to analyze financial documents such as invoices, receipts, payroll statements, and tax-related PDFs. By leveraging modern large language models, TaxLens automates the extraction and structuring of critical financial data, allowing teams to instantly review summaries, identify risks, and parse structured fields without manual data entry.
+### AI-powered Financial Document Intelligence
 
-This project was built as part of the SignalsHQ Frontend Engineer Internship challenge to demonstrate product thinking, AI integration, modern frontend architecture, clean backend design, and professional UI/UX.
+TaxLens is an AI-powered financial document analysis platform that enables users to upload financial PDFs such as invoices, receipts, payroll statements, and tax-related documents for instant AI-driven analysis.
 
----
+Using modern Large Language Models through OpenRouter, TaxLens extracts structured financial information, generates concise summaries, identifies potential risks, and provides actionable recommendations through a modern dashboard.
 
-## Features
-
-- **Upload PDF Documents:** Secure, in-memory processing of financial PDFs.
-- **AI-powered Analysis:** Fast, intelligent text extraction and parsing.
-- **Structured AI Responses:** Direct translation of unstructured text into strict JSON.
-- **Document Summary:** Instant executive overviews of uploaded files.
-- **Confidence Score:** AI-determined accuracy scoring.
-- **Extracted Financial Fields:** Automated parsing of vendors, amounts, dates, and classifications.
-- **Risk Detection:** Automated flagging of missing signatures, missing GST numbers, or compliance anomalies.
-- **Recommendations:** Actionable next steps based on document context.
-- **Modern Dashboard:** Premium, responsive, and meticulously spaced user interface.
-- **Smooth Loading Workflow:** Animated, non-blocking UI states reflecting backend AI processing.
+This project was built as a submission for the **SignalsHQ Frontend Engineer Internship Challenge** to demonstrate product thinking, AI integration, modern frontend engineering, clean backend architecture, and professional UI/UX.
 
 ---
 
-## Architecture Flow
+## 🌐 Live Demo
 
-Landing Page  &rarr;  Dashboard  &rarr;  Upload PDF  &rarr;  Extract Text  &rarr;  OpenRouter Analysis  &rarr;  Structured JSON  &rarr;  Display Results
+**Application:**  
+https://tax-lens-khaki.vercel.app
 
 ---
 
-## Tech Stack
+## 🎥 Demo Video
 
-**Frontend**
+**YouTube (Unlisted):**  
+https://youtu.be/YOUR_VIDEO_LINK
+
+---
+
+## Why TaxLens?
+
+Instead of submitting only my resume, I chose to build a complete AI-powered product inspired by the engineering culture at SignalsHQ.
+
+The objective was to demonstrate:
+
+- Product thinking
+- AI-assisted development
+- Modern frontend engineering
+- Backend API design
+- AI integration
+- End-to-end product development
+- Clean and scalable architecture
+
+---
+
+# Features
+
+- Upload financial PDF documents
+- AI-powered financial document analysis
+- Automatic PDF text extraction
+- Structured JSON response generation
+- Executive document summaries
+- Confidence score estimation
+- Financial field extraction
+- Risk detection
+- AI-generated recommendations
+- Responsive dashboard
+- Smooth loading animations
+- Clean modern UI
+
+---
+
+# Application Workflow
+
+```text
+Landing Page
+      │
+      ▼
+Dashboard
+      │
+      ▼
+Upload Financial PDF
+      │
+      ▼
+Extract PDF Text
+      │
+      ▼
+OpenRouter AI Analysis
+      │
+      ▼
+Structured JSON Response
+      │
+      ▼
+Interactive Dashboard Results
+```
+
+---
+
+# Tech Stack
+
+## Frontend
+
 - React
 - Tailwind CSS
 - Framer Motion
 - React Dropzone
 - Axios
 
-**Backend**
+## Backend
+
 - Node.js
-- Express
+- Express.js
 - Multer
 - pdf-parse
 
-**AI Intelligence**
+## AI
+
 - OpenRouter
-- GPT-4o Mini 
+- GPT-4o Mini
+
+## Deployment
+
+- Vercel
+- Render
 
 ---
 
-## Project Structure
+# Project Structure
 
 ```text
-taxlens/
-├── frontend/                 # React frontend application
-│   ├── src/
-│   │   ├── components/       # Reusable UI components
-│   │   ├── pages/            # Page layouts (Landing, Dashboard)
-│   │   └── services/         # API integration layer
-├── backend/                  # Express Node.js application
-│   ├── controllers/          # Route controllers
-│   ├── routes/               # API endpoint definitions
-│   └── services/             # Business logic and AI integration
-├── docs/                     # Technical documentation (API, UI, PRD)
-└── .agents/                  # Agentic environment configurations
+TaxLens
+│
+├── frontend
+│   ├── public
+│   ├── src
+│   │   ├── assets
+│   │   ├── components
+│   │   ├── pages
+│   │   ├── services
+│   │   ├── hooks
+│   │   ├── utils
+│   │   └── layouts
+│
+├── backend
+│   ├── controllers
+│   ├── routes
+│   ├── services
+│   ├── middleware
+│   ├── utils
+│   └── app.js
+│
+├── docs
+│   ├── API.md
+│   └── PRD.md
+│
+└── README.md
 ```
 
 ---
 
-## Installation & Setup
+# Installation
 
-### 1. Clone Repository
+## Clone Repository
+
 ```bash
-git clone https://github.com/yourusername/taxlens.git
-cd taxlens
+git clone https://github.com/YOUR_USERNAME/TaxLens.git
 ```
 
-### 2. Backend Setup
+---
+
+## Backend
+
 ```bash
 cd backend
 npm install
 ```
-Create a `.env` file in the `backend` directory:
+
+Create `.env`
+
 ```env
 PORT=900
-OpenRouter=your_openrouter_api_key_here
-```
-Run the backend server:
-```bash
-node index.js
+
+OpenRouter=YOUR_OPENROUTER_API_KEY
+
+CLIENT_URL=http://localhost:5173
 ```
 
-### 3. Frontend Setup
-Open a new terminal window:
+Run backend
+
+```bash
+npm start
+```
+
+---
+
+## Frontend
+
 ```bash
 cd frontend
+
 npm install
+
 npm run dev
 ```
-Navigate to `http://localhost:5173` in your browser.
+
+Create `.env`
+
+```env
+VITE_API_URL=http://localhost:900
+```
+
+Application runs at
+
+```text
+http://localhost:5173
+```
 
 ---
 
-## Future Improvements
+# Architecture
 
-- **Authentication:** Role-based access control for enterprise teams.
-- **Document History:** Persistent storage and retrieval of past analysis.
-- **Export Reports:** Downloadable CSV and PDF audit reports.
-- **Team Collaboration:** Shared workspaces and document annotation.
-- **Multi-document Analysis:** Batch processing for end-of-month reconciliations.
+```text
+                React Frontend
+                       │
+                       │
+                 Axios Request
+                       │
+                       ▼
+              Express REST API
+                       │
+                       ▼
+              PDF Text Extraction
+                 (pdf-parse)
+                       │
+                       ▼
+                OpenRouter API
+                       │
+                       ▼
+          Structured Financial JSON
+                       │
+                       ▼
+            Interactive Dashboard
+```
 
 ---
 
-## Acknowledgements
+# Future Improvements
 
-- **[OpenRouter](https://openrouter.ai/)** for providing a unified and fast API gateway for modern LLMs.
-- **[pdf-parse](https://github.com/mehmet-kozan/pdf-parse)** for reliable server-side PDF text extraction.
+- User Authentication
+- Document History
+- Export Reports
+- Team Workspace
+- Analytics Dashboard
+- Multi-document Analysis
+- OCR Support
+- Cloud Storage Integration
 
 ---
 
-## License
+# Acknowledgements
 
-MIT
+- OpenRouter for providing a unified API for modern LLMs.
+- pdf-parse for reliable PDF text extraction.
+- React, Express, and the open-source community.
+
+---
+
+# Author
+
+**Ajay**
+
+GitHub: https://github.com/AJAy2023/
+
+LinkedIn: www.linkedin.com/in/ajay-jadhav007
+
+---
+
+> **Note**
+>
+> TaxLens is a focused MVP built as part of the SignalsHQ Frontend Engineer Internship Challenge. The primary objective was to demonstrate product thinking, AI integration, frontend engineering, backend architecture, and the ability to rapidly build an end-to-end AI-powered application within a limited timeframe.
