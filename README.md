@@ -258,9 +258,3 @@ http://localhost:5173
 GitHub: https://github.com/AJAy2023/
 
 LinkedIn: www.linkedin.com/in/ajay-jadhav007
-
----
-
-> **Note**
->
-> TaxLens is a focused MVP built as part of the SignalsHQ Frontend Engineer Internship Challenge. The primary objective was to demonstrate product thinking, AI integration, frontend engineering, backend architecture, and the ability to rapidly build an end-to-end AI-powered application within a limited timeframe.
