@@ -7,7 +7,11 @@ const app = express();
 const PORT = process.env.PORT || 900;
 
 // Middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: process.env.CLIENT_URL,
+  })
+);
 app.use(express.json());
 
 // Routes
@@ -19,7 +23,6 @@ app.get('/health', (req, res) => {
 });
 
 app.use((err, req, res, next) => {
-  console.error(err.stack);
   res.status(500).json({
     success: false,
     error: 'Internal Server Error',
