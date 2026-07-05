@@ -122,23 +122,22 @@ TaxLens
 │   ├── src
 │   │   ├── assets
 │   │   ├── components
-│   │   ├── pages
-│   │   ├── services
-│   │   ├── hooks
-│   │   ├── utils
-│   │   └── layouts
+│   │         ├──Dashboard
+              ├──Landing
+│   │   services
 │
 ├── backend
 │   ├── controllers
 │   ├── routes
 │   ├── services
-│   ├── middleware
-│   ├── utils
-│   └── app.js
+│   ├──  index.js
+│ 
+│   
 │
 ├── docs
 │   ├── API.md
 │   └── PRD.md
+│   └── UI.md
 │
 └── README.md
 ```
